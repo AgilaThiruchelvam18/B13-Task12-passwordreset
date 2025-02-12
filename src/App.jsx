@@ -6,7 +6,7 @@ const RequestReset = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/auth/request-password-reset", { email });
+    await axios.post("https://b13-task12-pwdreset-backend.onrender.com/api/auth/request-password-reset", { email });
     alert("Reset link sent!");
   };
 
