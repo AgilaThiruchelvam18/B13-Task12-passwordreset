@@ -1,4 +1,4 @@
-export function dashboard(){
+const Dashboard = ()=>{
     return (
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
         <div className="bg-white p-6 rounded-lg shadow-lg w-96">
@@ -8,3 +8,4 @@ export function dashboard(){
       </div>
     );
 }
+export default Dashboard;
