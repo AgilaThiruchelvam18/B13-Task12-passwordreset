@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     try {
       await axios.post("https://password-reset-aa.onrender.com/api/auth/request-password-reset", { email });
       setMessage("Check your email for reset link.");
-      setTimeout(() => navigate("/login"), 3000);
+      // setTimeout(() => navigate("/login"), 3000);
     } catch (error) {
       setMessage("Failed to send reset link.");
     }
