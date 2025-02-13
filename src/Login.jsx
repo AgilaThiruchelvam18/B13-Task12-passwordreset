@@ -27,8 +27,7 @@ const Login = () => {
                 "https://password-reset-aa.onrender.com/api/auth/login",
                 values
               );
-              localStorage.setItem("token", response.data.token);
-              navigate("/");
+              navigate("/dashboard");
             } catch (error) {
               setMessage(error.response?.data?.message || "Login failed");
             }
