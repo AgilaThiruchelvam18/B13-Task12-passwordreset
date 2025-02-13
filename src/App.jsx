@@ -1,24 +1,20 @@
-import { useState } from "react";
-import axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import Signup from "./Signup";
+import Login from "./Login";
+import ForgotPassword from "./ForgotPassword";
+import ResetPassword from "./ResetPassword";
 
-const RequestReset = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await axios.post("https://b13-task12-pwdreset-backend.onrender.com/api/auth/request-password-reset", { email });
-    alert("Reset link sent!");
-  };
-
+function App() {
   return (
-    <div>
-      <h2>Reset Password</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <button type="submit">Send Reset Link</button>
-      </form>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
-export default RequestReset;
+export default App;
