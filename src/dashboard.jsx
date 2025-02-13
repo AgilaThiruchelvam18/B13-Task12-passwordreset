@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router";
 // import Login from "./Login";
 
-const Dashboard = ()=>{
+function Dashboard(){
   // const navigate = useNavigate();
     return (
       <div className="flex justify-center items-center min-h-screen bg-gray-100">
